@@ -163,6 +163,8 @@
     text-align: center;
     border-radius: 15px;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   
     /* efek awal */
     transition: 0.3s ease;
@@ -383,22 +385,6 @@
     color: #ff7b00;
   }
   
-  .checkout-btn {
-    display: block;
-    width: 100%;
-    background: #ff7b00;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: .3s;
-  }
-  
-  .checkout-btn:hover {
-    background: #e36d00;
-  }
   
   /*           RESPONSIVE            */
   
