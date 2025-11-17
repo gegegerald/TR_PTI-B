@@ -3,35 +3,67 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Keranjang Tanpa JS</title>
+<title>Keranjang</title>
 <link rel="stylesheet" href="keranjang.css" />
 </head>
 <body>
+    <header class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span>
+    </div>
+
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="product.html">Products</a>
+      <a href="#">Tentang Kami</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="search-box">
+        <input type="text" placeholder="Cari Produk...">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="cart-icon">
+        <a href="keranjang.html"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </div>
+  </header>
+
+<!-- Tombol kembali ke home -->
+<a href="index.html" class="btn home-btn">&#11013;</a>
+
 
 <label for="keranjang-toggle" class="btn">Lihat Keranjang</label>
 <input type="checkbox" id="keranjang-toggle" />
 
 <div class="keranjang-panel">
-<h3>Keranjang</h3>
-<p>(Hanya tampilan statis - tanpa JS)</p>
-<ul>
-<li>Produk A - Rp50.000</li>
-<li>Produk B - Rp80.000</li>
-</ul>
-<label for="keranjang-toggle" class="btn">Tutup</label>
+    <h3>Keranjang</h3>
+    <p>(Hanya tampilan statis - tanpa JS)</p>
+    <ul>
+        <li>Produk A - Rp50.000</li>
+        <li>Produk B - Rp80.000</li>
+    </ul>
+
+    <!-- Tombol tutup -->
+    <label for="keranjang-toggle" class="btn">Tutup</label>
 </div>
-<div class="overlay"></div>
+
+<!-- Overlay agar bisa klik untuk tutup -->
+<label for="keranjang-toggle" class="overlay"></label>
 
 <h2>Daftar Produk</h2>
+
 <div class="produk">
-<h3>Produk A</h3>
-<p>Rp50.000</p>
-<a class="btn">Tambah ke Keranjang</a>
+    <h3>Produk A</h3>
+    <p>Rp50.000</p>
+    <a class="btn">Tambah ke Keranjang</a>
 </div>
+
 <div class="produk">
-<h3>Produk B</h3>
-<p>Rp80.000</p>
-<a class="btn">Tambah ke Keranjang</a>
+    <h3>Produk B</h3>
+    <p>Rp80.000</p>
+    <a class="btn">Tambah ke Keranjang</a>
 </div>
 
 </body>
