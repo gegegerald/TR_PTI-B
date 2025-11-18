@@ -489,6 +489,185 @@ footer span {
   animation: float 3s infinite ease-in-out;
 }
 
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.auth-box {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.auth-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.auth-box .subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* INPUT GROUP */
+.auth-box .input-group {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.auth-box .input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.auth-box .input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.auth-box .input-group input:focus {
+  border-color: #ff7b00;
+  box-shadow: 0 0 5px rgba(255, 123, 0, 0.3);
+  outline: none;
+}
+
+/* BUTTON */
+.btn-auth {
+  width: 100%;
+  padding: 12px;
+  background: #ff7b00;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.btn-auth:hover {
+  background: #e36d00;
+}
+
+/* SWITCH TO OTHER PAGE */
+.switch {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #ff7b00;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
+/* ANIMASI MASUK */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   ANIMASI MASUK HOMEPAGE
+   =========================== */
+
+/* HERO TEXT */
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.8s ease forwards;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* CATEGORY CARD (muncul satu-satu) */
+.category-card {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.category-card:nth-child(1) { animation-delay: 0.2s; }
+.category-card:nth-child(2) { animation-delay: 0.35s; }
+.category-card:nth-child(3) { animation-delay: 0.5s; }
+.category-card:nth-child(4) { animation-delay: 0.65s; }
+
+/* PRODUCT CARD */
+.product-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.product-card:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i));
+}
+
+/* KEYFRAMES */
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 28px 22px;
+  }
+
+  .auth-box h2 {
+    font-size: 24px;
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .about-container {
