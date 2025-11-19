@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 /* HEADER */
 .navbar {
   width: 100%;
@@ -18,6 +19,57 @@
   top: 0;
   z-index: 999;
 }
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo span {
+  color: #ff7b00;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav .active {
+  color: #ff7b00;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 8px 30px 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 180px;
+}
+
+.search-box i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
 /* Tombol Kembali */
 .btn-back img {
     width: 32px;
@@ -65,76 +117,208 @@
   color: #ff7b00;
 }
 
-/* BAGIAN KIRI */
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Warna latar belakang halaman */
+}
+
+.title {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* --- KONTENER UTAMA --- */
+.container {
+    /* SOLUSI: Menggunakan lebar 100% dan menghapus max-width/margin pemusatan */
+    width: 100%; 
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Pembagian Kolom */
+    gap: 20px;
+    padding: 20px; /* Padding untuk jarak dari tepi viewport */
+}
+
+/* --- BAGIAN KIRI (LIST PRODUK) --- */
 .cart-left {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
+
 .select-all {
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
     margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 .cart-item {
-    display: flex;
-    align-items: center;
+    display: grid;
+    /* Grid item: Checkbox | Toko | Gambar | Info Produk | Kuantitas */
+    grid-template-columns: 30px 100px 80px 1fr 100px; 
     gap: 15px;
     padding: 15px 0;
-    border-top: 1px solid #eee;
+    align-items: center;
+    border-bottom: 1px solid #eee;
 }
-.cart-item:first-child {
-    border-top: none;
+
+.product-shop {
+    font-size: 14px;
+    color: #555;
+    grid-column: 2 / span 2; /* Mencakup kolom Toko dan Gambar */
 }
 
 .product-img {
     width: 80px;
     height: 80px;
-    border-radius: 10px;
     object-fit: cover;
+    border-radius: 8px;
+    grid-row: 2 / span 3; /* Mulai dari baris kedua */
+    grid-column: 3;
 }
 
 .product-info {
-    flex: 1;
+    grid-column: 4;
 }
-.price {
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.discount-percent {
+    color: #ff5c00;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.price-discounted {
+    color: #333;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.price-original {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #f00;
+    cursor: pointer;
+    font-size: 14px;
     margin-top: 5px;
 }
-.harga { color: #ff7b00; font-weight: bold; }
-.harga-coret { text-decoration: line-through; font-size: 12px; color: gray; }
 
-.quantity {
+.note {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 14px;
+    resize: none;
+    height: 40px;
+}
+
+.quantity-control {
     display: flex;
     align-items: center;
-    gap: 10px;
+    grid-column: 5;
 }
-.quantity button {
-    padding: 5px 8px;
-    border: 1px solid #ccc;
-    background: white;
-    border-radius: 5px;
+.qty-btn, .qty-input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.qty-btn {
     cursor: pointer;
 }
+.qty-input {
+    border-left: none;
+    border-right: none;
+}
 
-/* BAGIAN KANAN */
+/* --- BAGIAN KANAN (RINGKASAN BELANJA) --- */
 .cart-right {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid #ddd;
-    height: fit-content;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    height: fit-content; /* Agar kotak hanya setinggi konten */
+    position: sticky; /* Agar tetap terlihat saat scroll */
+    top: 20px;
 }
-.btn-beli {
-    background: #ff7b00;
+
+.cart-right h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* VOUCHER BOX */
+.voucher-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+}
+
+.voucher-box label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-top: 10px;
+}
+
+.voucher-box select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.apply-voucher {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
     border: none;
+    background: #ff8c00;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* BUTTON BELANJA SEKARANG */
+.btn-checkout {
     width: 100%;
     padding: 12px;
+    border: none;
+    background: #ff5c00;
     color: white;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
 }
+
+
 
 /* ===== RESPONSIVE (MOBILE) ===== */
 @media (max-width: 780px) {

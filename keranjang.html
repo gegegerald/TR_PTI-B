@@ -1,130 +1,90 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keranjang Belanja</title>
     <link rel="stylesheet" href="keranjang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 </head>
+</head>
+
 <body>
 
     <!-- HEADER -->
     <header class="navbar">
-        <a href="index.html" class="btn-back">
-          <img src="asset\back-button.png" alt="Kembali">
-        </a>
-        <input type="text" class="search" placeholder="Cari Produk">
         <div class="logo">
-        <i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span>
+            <i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span>
         </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="About_Us.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-box">
+                <input type="text" placeholder="Cari Produk..." />
+                <i class="fa fa-search"></i>
+            </div>
     </header>
 
-    <h2 class="title">Keranjang</h2>
-
+    <div class="title">Keranjang Belanja</div>
+    
     <div class="container">
-
-        <!-- KIRI -->
+        
         <div class="cart-left">
+            
             <div class="select-all">
-                <input type="checkbox"> Pilih Semua (3)
+                <input type="checkbox" id="select-all" checked>
+                <label for="select-all">Pilih Semua</label>
             </div>
 
-            <!-- ITEM 1 -->
             <div class="cart-item">
-                <input type="checkbox" class="check-item">
-                <img src="img/earphone.jpg" alt="earphone" class="product-img">
+                <input type="checkbox" checked>
+                <div class="product-shop">Toko Audio Pro</div>
+                
+                <img src="placeholder.png" alt="Earphone" class="product-img">
+                
                 <div class="product-info">
-                    <h4>Kuping Sensi</h4>
-                    <p>KZ Saga In Ear Monitor Earphone</p>
-                    <small>Balance, With Mic Cable</small>
-                    <div class="price">
-                        <span class="harga">Rp189.050</span>
-                        <span class="harga-coret">Rp499.000</span>
-                    </div>
+                    <div class="product-name">Kuping Sensi Earphone</div>
+                    <div class="discount-percent">Diskon 60%</div>
+                    <div class="price-discounted">Rp189.050</div>
+                    <div class="price-original">Rp299.000</div>
+                    <button class="btn-delete">Hapus</button>
+                    <textarea class="note" placeholder="Catatan"></textarea>
                 </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
+                
+                <div class="quantity-control">
+                    <button class="qty-btn minus">-</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus">+</button>
                 </div>
+            </div>
             </div>
 
-            <!-- ITEM 2 -->
-            <div class="cart-item">
-                <input type="checkbox" class="check-item">
-                <img src="img/psu.jpg" alt="psu" class="product-img">
-                <div class="product-info">
-                    <h4>Jaya PC</h4>
-                    <p>MSI MAG A550BN 550W PSU</p>
-                    <div class="price">
-                        <span class="harga">Rp729.000</span>
-                    </div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-            </div>
-            <div class="cart-item">
-                <input type="checkbox" class="check-item">
-                <img src="img/psu.jpg" alt="psu" class="product-img">
-                <div class="product-info">
-                    <h4>Jaya PC</h4>
-                    <p>MSI MAG A550BN 550W PSU</p>
-                    <div class="price">
-                        <span class="harga">Rp729.000</span>
-                    </div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-            </div>
-            <div class="cart-item">
-                <input type="checkbox" class="check-item">
-                <img src="img/psu.jpg" alt="psu" class="product-img">
-                <div class="product-info">
-                    <h4>Jaya PC</h4>
-                    <p>MSI MAG A550BN 550W PSU</p>
-                    <div class="price">
-                        <span class="harga">Rp729.000</span>
-                    </div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-            </div>
-            <div class="cart-item">
-                <input type="checkbox" class="check-item">
-                <img src="img/psu.jpg" alt="psu" class="product-img">
-                <div class="product-info">
-                    <h4>Jaya PC</h4>
-                    <p>MSI MAG A550BN 550W PSU</p>
-                    <div class="price">
-                        <span class="harga">Rp729.000</span>
-                    </div>
-                </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- KANAN -->
         <div class="cart-right">
             <h3>Ringkasan Belanja</h3>
-            <p>Pilih barang dulu sebelum pakai promo</p>
-            <button class="btn-beli">Beli</button>
-        </div>
+            
+            <div class="voucher-box">
+                <p>Pakai Voucher Untuk Potongan Harga</p>
+                <label for="voucher-promo">Voucher Promo:</label>
+                <select id="voucher-promo">
+                    <option>-- Pilih Voucher --</option>
+                    <option>Gratis Ongkir</option>
+                    <option>Diskon 10%</option>
+                </select>
+                <button class="apply-voucher">Pakai</button>
+            </div>
 
+            <button class="btn btn-checkout">Belanja Sekarang</button>
+        </div>
     </div>
 
 </body>
+
 </html>
