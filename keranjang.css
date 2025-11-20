@@ -101,7 +101,7 @@ nav .active {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
-    margin: 20px;
+    padding: 20px;
 }
 
 .logo {
@@ -139,7 +139,9 @@ html, body {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Pembagian Kolom */
     gap: 20px;
-    padding: 20px; /* Padding untuk jarak dari tepi viewport */
+    padding-top: 5px;
+    padding-left: 20px; /* Padding untuk jarak dari tepi viewport */
+    padding-right: 20px;
 }
 
 /* --- BAGIAN KIRI (LIST PRODUK) --- */
@@ -147,7 +149,7 @@ html, body {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .select-all {
@@ -164,7 +166,7 @@ html, body {
     display: grid;
     /* Grid item: Checkbox | Toko | Gambar | Info Produk | Kuantitas */
     grid-template-columns: 30px 100px 80px 1fr 100px; 
-    gap: 15px;
+    gap: 10px;
     padding: 15px 0;
     align-items: center;
     border-bottom: 1px solid #eee;
@@ -177,12 +179,11 @@ html, body {
 }
 
 .product-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    width: 150px;
+    height: 150px;
     border-radius: 8px;
-    grid-row: 2 / span 3; /* Mulai dari baris kedua */
-    grid-column: 3;
+    grid-row: 2 / span; /* Mulai dari baris kedua */
+    grid-column: 2;
 }
 
 .product-info {
@@ -257,9 +258,9 @@ html, body {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0px 10px rgb(0, 0, 0, 0.1);
     height: fit-content; /* Agar kotak hanya setinggi konten */
-    position: sticky; /* Agar tetap terlihat saat scroll */
+    position: static; /* Agar tetap terlihat saat scroll */
     top: 20px;
 }
 
