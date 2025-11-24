@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 /* HEADER */
 .navbar {
   width: 100%;
@@ -51,6 +50,7 @@ nav .active {
   align-items: center;
   gap: 20px;
 }
+
 .search-box {
   position: relative;
 }
@@ -116,8 +116,6 @@ nav .active {
 .logo span {
   color: #ff7b00;
 }
-
-
 
 html, body {
     margin: 0;
@@ -220,6 +218,13 @@ html, body {
     cursor: pointer;
     font-size: 14px;
     margin-top: 5px;
+    /* Animasi: Transisi warna dan scale pada hover */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-delete:hover {
+    color: #c0392b;
+    transform: scale(1.1);
 }
 
 .note {
@@ -238,6 +243,7 @@ html, body {
     align-items: center;
     grid-column: 5;
 }
+
 .qty-btn, .qty-input {
     width: 30px;
     height: 30px;
@@ -245,9 +251,18 @@ html, body {
     border: 1px solid #ddd;
     background: #fff;
 }
+
 .qty-btn {
     cursor: pointer;
+    /* Animasi: Transisi background dan scale pada hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.qty-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
 .qty-input {
     border-left: none;
     border-right: none;
@@ -304,6 +319,13 @@ html, body {
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
+    /* Animasi: Transisi background dan scale pada hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.apply-voucher:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
 }
 
 /* BUTTON BELANJA SEKARANG */
@@ -317,9 +339,27 @@ html, body {
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    /* Animasi: Transisi background dan scale pada hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.btn-checkout:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
 
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 25px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer span {
+  color: #ff7b00;
+}
 
 /* ===== RESPONSIVE (MOBILE) ===== */
 @media (max-width: 780px) {
