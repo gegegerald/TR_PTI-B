@@ -70,57 +70,15 @@ nav .active {
   color: #777;
 }
 
-/* Tombol Kembali */
-.btn-back img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
+.cart-icon i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black;
 }
 
-/* Agar tetap rata tengah dengan navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.search {
-    margin: 0 20px;
-    flex: 1;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.title {
-    margin: 20px;
-    font-size: 24px;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    padding: 20px;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.logo span {
+.cart-icon i:hover{
   color: #ff7b00;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* Warna latar belakang halaman */
 }
 
 .title {
@@ -129,21 +87,24 @@ html, body {
     font-weight: 700;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
 /* --- KONTENER UTAMA --- */
 .container {
-    /* SOLUSI: Menggunakan lebar 100% dan menghapus max-width/margin pemusatan */
     width: 100%; 
-    
     display: grid;
     grid-template-columns: 2fr 1fr; /* Pembagian Kolom */
     gap: 20px;
     padding-top: 5px;
-    padding-left: 20px; /* Padding untuk jarak dari tepi viewport */
+    padding-left: 20px; 
     padding-right: 20px;
 }
 
 /* --- BAGIAN KIRI (LIST PRODUK) --- */
-.cart-left {
+.cart-kiri {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -162,7 +123,6 @@ html, body {
 
 .cart-item {
     display: grid;
-    /* Grid item: Checkbox | Toko | Gambar | Info Produk | Kuantitas */
     grid-template-columns: 30px 100px 80px 1fr 100px; 
     gap: 10px;
     padding: 15px 0;
