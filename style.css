@@ -239,7 +239,7 @@ nav .active {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 15px;
-  transition: transform 0.4s ease; /* tambahan */
+  transition: transform 0.4s ease;
 }
 
 .product-card:hover img {
