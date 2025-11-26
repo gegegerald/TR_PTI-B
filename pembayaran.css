@@ -1,0 +1,189 @@
+/* FONT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #ff6600;
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #ff6600;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin: 30px 0;
+    font-weight: 700;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    gap: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+/* LEFT BOX */
+.left-box, .right-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.left-box {
+    flex: 2;
+}
+
+.left-box h3 {
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    margin-bottom: 15px;
+}
+
+.payment-option input {
+    display: none;
+}
+
+.payment-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.payment-card i {
+    font-size: 24px;
+    color: #ff6600;
+}
+
+.payment-option input:checked + .payment-card {
+    border-color: #ff6600;
+    background: #ffecec;
+}
+
+.payment-card:hover {
+    background: #fff3f3;
+}
+
+.btn-pembayaran {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #ff6600;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-pembayaran:hover {
+    background: #ff6600;
+}
+
+/* RIGHT BOX */
+.right-box {
+    flex: 1;
+    height: fit-content;
+}
+
+.right-box h3 {
+    margin-bottom: 20px;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.summary .total {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn-bayar {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #ff6600;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-bayar:hover {
+    background: #ff6600;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
+footer span {
+    color: #ff6600;
+}
+
+/* --- ANIMASI KLIK UNTUK METODE PEMBAYARAN --- */
+
+/* Animasi klik (efek pencet) */
+.payment-card:active {
+    transform: scale(1.05);
+}
+
+/* Efek saat radio dipilih */
+.payment-option input:checked + .payment-card {
+    border-color: #ff6600;
+    background: #ffecec;
+    box-shadow: 0 4px 12px rgba(255, 77, 77, 0.3);
+    transform: scale(1.03);
+}
