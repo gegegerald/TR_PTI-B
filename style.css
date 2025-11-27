@@ -846,3 +846,45 @@ nav .active {
     font-size: 24px;
   }
 }
+
+/* ANIMASI MASUK — ABOUT US*/
+.about-text,
+.about-image img {
+  opacity: 0;
+}
+
+/* Text masuk dari kiri */
+.about-text {
+  animation: aboutSlideLeft 0.8s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* Gambar masuk dari kanan */
+.about-image img {
+  transform: translateX(40px);
+  animation: aboutSlideRight 0.9s ease forwards;
+  animation-delay: 0.25s;
+}
+
+/* KEYFRAMES */
+@keyframes aboutSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
