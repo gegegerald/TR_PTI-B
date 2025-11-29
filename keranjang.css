@@ -104,7 +104,6 @@ nav .active {
     padding-right: 20px;
 }
 
-/* --- BAGIAN KIRI (LIST PRODUK) --- */
 .cart-kiri {
     background: #fff;
     padding: 20px;
@@ -333,18 +332,48 @@ footer span {
         gap: 10px;
     }
 
-    .search {
+    .search-box {
         order: 3;
         width: 100%;
     }
 
+    /* make each cart item stack vertically and flow naturally on mobile */
     .cart-item {
-        flex-direction: column;
-        align-items: flex-start;
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
     }
 
-    .quantity {
-        margin-top: 10px;
+    .cart-item > input[type="checkbox"] {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .product-shop {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+
+    .product-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
+    }
+
+    .product-info {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* quantity-control used in markup — ensure it's styled responsively */
+    .quantity-control {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        width: auto;
+        margin-top: 6px;
     }
 
     .product-img {
