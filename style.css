@@ -980,3 +980,32 @@ nav .active {
     font-size: 32px;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar ul li a {
+    font-size: 13px;
+    padding: 6px;
+  }
+  .navbar {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .search-box {
+    width: 100%;
+    margin-top: 8px;
+    order: 3;
+  }
+}
