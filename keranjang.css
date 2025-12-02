@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* HEADER */
+ /* navbar */
 .navbar {
   width: 100%;
   padding: 15px 50px;
@@ -81,6 +81,46 @@ nav .active {
 .cart-icon i:hover{
   color: #ff7b00;
 }
+
+/* ---------- Mobile menu toggle (CSS-only) ---------- */
+/* Keep the checkbox visually hidden but available for the CSS toggle */
+.nav-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -9999px;
+    top: auto;
+    overflow: hidden;
+}
+
+.menu-btn {
+    display: none; /* shown only on small screens */
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    margin-left: 8px;
+}
+
+.menu-icon {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #333;
+    position: relative;
+}
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: #333;
+}
+.menu-icon::before { top: -7px; }
+.menu-icon::after  { top: 7px; }
+/* navbar selesai */
 
 .title {
     margin: 20px;
@@ -330,8 +370,82 @@ footer span {
     .navbar {
         flex-wrap: wrap;
         gap: 10px;
+        align-items: center;
+        padding: 12px; /* slightly reduce padding on small screens */
     }
 
+    /* keep logo and header-right together; place nav on a separate row */
+    .logo {
+        order: 1;
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-right {
+        order: 1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-end;
+    }
+
+    /* nav appears below (full width). On very small screens the nav will be hidden
+       by default and toggled using the checkbox + label (no JS). */
+    nav {
+        order: 2;
+        width: 100%;
+        display: flex; /* desktop-like fallback */
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        padding-top: 6px;
+    }
+
+    /* show hamburger/menu button and hide nav by default for narrow screens */
+    .menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        order: 1; /* put next to logo/header-right */
+    }
+
+    /* hide the nav and show only when the toggle input is checked */
+    nav {
+        display: none;
+    }
+
+    /* When the checkbox is checked, reveal the nav as a vertical list */
+    .nav-toggle:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: #fff;
+        padding: 10px 12px;
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    /* Make nav links touch-friendly when visible */
+    .nav-toggle:checked ~ nav a {
+        display: block;
+        width: 100%;
+        padding: 8px 10px;
+        text-align: left;
+        border-radius: 6px;
+    }
+
+    /* make nav links easier to tap and avoid visual crowding */
+    nav a {
+        margin: 6px 8px;
+        padding: 6px 8px;
+        display: inline-block;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    /* Put search box below nav (if present) and make it full-width for touch */
     .search-box {
         order: 3;
         width: 100%;
@@ -365,6 +479,7 @@ footer span {
         display: block;
         width: 100%;
         margin-bottom: 10px;
+        padding-right: 0; /* make sure text wraps naturally */
     }
 
     /* quantity-control used in markup — ensure it's styled responsively */
@@ -374,10 +489,36 @@ footer span {
         align-items: center;
         width: auto;
         margin-top: 6px;
+        justify-content: flex-start;
+    }
+
+    /* make the click/tap targets easier on small screens */
+    .qty-btn, .qty-input {
+        width: 40px;
+        height: 36px;
+        font-size: 16px;
     }
 
     .product-img {
         width: 100%;
         height: auto;
+    }
+
+    /* Ensure cart columns stack correctly and have breathing room */
+    .cart-left, .cart-right {
+        width: 100%;
+        box-shadow: none; /* reduce heavy shadow on mobile */
+        padding: 12px;
+    }
+
+    .cart-right {
+        margin-top: 14px;
+    }
+
+    /* Reduce global container padding on small screens so content fills viewport */
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+        gap: 12px;
     }
 }
