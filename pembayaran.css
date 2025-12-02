@@ -11,7 +11,6 @@ body {
 }
 
 /* NAVBAR */
-/* NAVBAR */
 .navbar {
   width: 100%;
   padding: 15px 50px;
@@ -232,4 +231,5 @@ footer span {
     box-shadow: 0 4px 12px rgba(255, 77, 77, 0.3);
     transform: scale(1.03);
 }
+
 
