@@ -1,4 +1,3 @@
-/* FONT */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@ body {
     background: #f4f4f4;
 }
 
-/* NAVBAR */
+
 .navbar {
   width: 100%;
   padding: 15px 50px;
@@ -93,7 +92,7 @@ body {
 }
 
 
-/* TITLE */
+
 .title {
     text-align: center;
     font-size: 28px;
@@ -101,7 +100,7 @@ body {
     font-weight: 700;
 }
 
-/* LAYOUT */
+
 .container {
     display: flex;
     gap: 25px;
@@ -109,7 +108,6 @@ body {
     margin: auto;
 }
 
-/* LEFT BOX */
 .left-box, .right-box {
     background: white;
     padding: 25px;
@@ -175,7 +173,7 @@ body {
     background: #ff6600;
 }
 
-/* RIGHT BOX */
+
 .right-box {
     flex: 1;
     height: fit-content;
@@ -212,7 +210,7 @@ body {
     background: #ff6600;
 }
 
-/* FOOTER */
+
 footer {
     margin-top: 40px;
     text-align: center;
@@ -223,14 +221,14 @@ footer span {
     color: #ff6600;
 }
 
-/* --- ANIMASI KLIK UNTUK METODE PEMBAYARAN --- */
 
-/* Animasi klik (efek pencet) */
+
+
 .payment-card:active {
     transform: scale(1.05);
 }
 
-/* Efek saat radio dipilih */
+
 .payment-option input:checked + .payment-card {
     border-color: #ff6600;
     background: #ffecec;
@@ -239,11 +237,7 @@ footer span {
 }
 
 
-/* ============================== */
-/*        RESPONSIVE STYLE        */
-/* ============================== */
 
-/* --- Tablet (max-width: 992px) --- */
 @media (max-width: 992px) {
 
     .navbar {
@@ -268,7 +262,7 @@ footer span {
     }
 }
 
-/* --- HP Landscape & Tablet Kecil (max-width: 768px) --- */
+
 @media (max-width: 768px) {
 
     .navbar {
@@ -276,7 +270,7 @@ footer span {
     }
 
     .navbar nav {
-        display: none; /* sembunyikan menu di HP */
+        display: none; 
     }
 
     .container {
@@ -285,7 +279,7 @@ footer span {
     }
 
     .right-box {
-        order: -1; /* Ringkasan pindah ke atas */
+        order: -1;
     }
 
     .title {
@@ -293,7 +287,7 @@ footer span {
     }
 }
 
-/* --- HP (max-width: 576px) --- */
+
 @media (max-width: 576px) {
 
     .navbar {
@@ -343,7 +337,7 @@ footer span {
     }
 }
 
-/* --- HP Kecil (max-width: 430px) --- */
+
 @media (max-width: 430px) {
 
     .logo {
@@ -368,3 +362,4 @@ footer span {
         font-size: 14px;
     }
 }
+
