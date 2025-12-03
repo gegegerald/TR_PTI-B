@@ -22,7 +22,13 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
+  
 }
+
+.navbar a {
+    text-decoration: none;
+}
+
 
 .logo {
   font-size: 28px;
@@ -233,3 +239,132 @@ footer span {
 }
 
 
+/* ============================== */
+/*        RESPONSIVE STYLE        */
+/* ============================== */
+
+/* --- Tablet (max-width: 992px) --- */
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .left-box, .right-box {
+        padding: 20px;
+    }
+}
+
+/* --- HP Landscape & Tablet Kecil (max-width: 768px) --- */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar nav {
+        display: none; /* sembunyikan menu di HP */
+    }
+
+    .container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .right-box {
+        order: -1; /* Ringkasan pindah ke atas */
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+/* --- HP (max-width: 576px) --- */
+@media (max-width: 576px) {
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .cart-icon i {
+        font-size: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 92%;
+        gap: 20px;
+    }
+
+    .left-box, .right-box {
+        padding: 18px;
+    }
+
+    .payment-card {
+        padding: 12px;
+        font-size: 15px;
+        gap: 12px;
+    }
+
+    .payment-card i {
+        font-size: 20px;
+    }
+
+    .btn-pembayaran,
+    .btn-bayar {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .summary p {
+        font-size: 14px;
+    }
+
+    .summary .total {
+        font-size: 18px;
+    }
+}
+
+/* --- HP Kecil (max-width: 430px) --- */
+@media (max-width: 430px) {
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .payment-card {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .btn-pembayaran, 
+    .btn-bayar {
+        font-size: 14px;
+    }
+
+    .summary p span {
+        font-size: 14px;
+    }
+}
