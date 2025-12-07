@@ -1,114 +1,134 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pembayaran</title>
-
-   
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
- 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-   
-    <link rel="stylesheet" href="pembayaran.css">
+    <title>Document</title>
 </head>
 
 <body>
-
-    
-    <header class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-bag-shopping"></i> Belanja<span>Kuy</span>
-        </div>
-
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="product.html">Products</a>
-            <a href="About_Us.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <div class="header-right">
-            <div class="search-box">
-                <input type="text" placeholder="Cari Produk..." />
-                <i class="fa fa-search"></i>
-            </div>
-            <div class="cart-icon">
-                <a href="keranjang.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
-        </div>
-    </header>
-
-    <div class="title">Metode Pembayaran</div>
-
-    <div class="container">
-
-       
-        <div class="left-box">
-            <h3>Pilih Metode Pembayaran</h3>
-
-            <div class="payment-option">
-                <input type="radio" name="payment" id="bank">
-                <label for="bank" class="payment-card">
-                    <i class="fa-solid fa-building-columns"></i>
-                    <span>Transfer Bank</span>
-                </label>
-            </div>
-
-            <div class="payment-option">
-                <input type="radio" name="payment" id="paylater">
-                <label for="paylater" class="payment-card">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>Paylater</span>
-                </label>
-            </div>
-
-            <div class="payment-option">
-                <input type="radio" name="payment" id="cash">
-                <label for="cash" class="payment-card">
-                    <i class="fa-solid fa-money-bill-wave"></i>
-                    <span>Cash</span>
-                </label>
-            </div>
-
-            <div class="payment-option">
-                <input type="radio" name="payment" id="cod">
-                <label for="cod" class="payment-card">
-                    <i class="fa-solid fa-truck"></i>
-                    <span>COD (Bayar di Tempat)</span>
-                </label>
-            </div>
-
-            <button class="btn-pembayaran">Lanjutkan Pembayaran</button>
-        </div>
-
-        
-        <div class="right-box">
-            <h3>Ringkasan Belanja</h3>
-
-            <div class="summary">
-                <p>Total Produk: <span>Rp 105.282.950</span></p>
-                <p>Ongkos Kirim: <span>Rp 20.000</span></p>
-                <p>Voucher: <span>Rp 0</span></p>
-                <hr>
-                <p class="total">Total Bayar: <span>Rp 105.302.950</span></p>
-            </div>
-
-            <button class="btn-bayar">Bayar Sekarang</button>
-        </div>
-
+    <center>
+        <h1>TTS ASISTENSI DOSEN PTI B</h1>
+        <h2>Fakultas Teknologi Informasi</h2>
+        <h3>Program studi informatika</h3>
+    </center>
+    <p>Dosen Pengampu:</p>
+    <p>Nama: </p>
+    <p>NIM: </p>
+    <hr>
+    <h3>Form Login dan Register</h3>
+     <div align="center">
+        <form action="pti.html">
+            <table border="1" cellpadding="8" cellspacing="0">
+                <tbody>
+                    <thead>
+                        <tr>
+                            <th  colspan="5">Form Login</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>Username</th>
+                        <td>
+                            <label for="usernamer"></label>
+                            <input type="text" id="nama" name="nama" required placeholder="Masukan username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Password</th>
+                        <td>
+                            <label for="password"></label>
+                            <input type="password" id="password" name="password" required placeholder="Masukan password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Remember me</th>
+                        <td>
+                            <input type="checkbox" name="ingatsaya" value="ya" required> Ya
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2">
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
     </div>
-
-    <footer>
-        <p>© 2025 <span>BelanjaKuy</span>. All rights reserved.</p>
+    <br>
+      <div align="center">
+        <form action="pti.html">
+            <table border="1" cellpadding="8" cellspacing="0">
+                <tbody>
+                    <thead>
+                        <tr>
+                            <th  colspan="5">Form Register</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th>Nama Lengkap</th>
+                        <td>
+                            <label for="nama"></label>
+                            <input type="text" id="nama1" name="nama1" required placeholder="Nama Lengkap">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>
+                            <label for="email"></label>
+                            <input type="email" id="email" name="email" required placeholder="contoh@gmail.com">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                       <td>
+                            <label for="usernamer"></label>
+                            <input type="text" id="username" name="username" required placeholder="Buat username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Password</th>
+                        <td>
+                            <label for="password"></label>
+                            <input type="password2" id="password2" name="password2" required placeholder="Buat password">
+                        </td>
+                    </tr>
+                     <tr>
+                        <th>Jenis Kelamin</th>
+                        <td>
+                            <input type="radio" name="jk" value="Laki-Laki" required> Laki-Laki
+                            <input type="radio" name="jk" value="Perempuan" required> Perempuan
+                        </td>
+                    </tr>
+                     <tr>
+                        <th>Asal Fakultas</th>
+                        <td>
+                            <label for=""></label>
+                            <select id="fakultas" name="fakultas">
+                                <option value="">-- Pilih Fakultas --</option>
+                                <option value="fti">Fakultas Teknologi Informasi</option>
+                                <option value="seni">Fakultas Bahasa dan Seni</option>
+                                <option value="feb">Fakultas Ekonomi dan Bisnis</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2">
+                            <button type="submit">Kirim</button>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <br>
+    <hr>
+    <footer align="center">
+        &copy; 2025 Fakultas Teknologi Informasi -UKSW
     </footer>
-
 </body>
 
 </html>
-
-
-
